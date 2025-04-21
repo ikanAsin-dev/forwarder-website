@@ -1,0 +1,408 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    line-height: 1.6;
+}
+
+header {
+    background: #004aad;
+    color: white;
+    padding: 0.5rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    height: 60px;
+}
+
+/* Navigation Styles */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.logo-image {
+    width: 109px;
+    height: 35px;
+    margin-right: 0.5rem;
+}
+
+.logo span {
+    font-size: 1.5rem;
+}
+
+.main-nav {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 2rem;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    height: 100vh;
+    background: url('../images/hero-image.jpg') no-repeat center/cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    padding-top: 80px;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.cta-button {
+    background: #ff6200;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* Country Flags in Hero Section */
+.country-flags {
+    position: absolute;
+    top: 100px;
+    left: 20px;
+    display: flex;
+    z-index: 10;
+}
+
+/* Style for the flag container */
+.flag-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-right: 1rem;
+}
+
+/* Style for the flag images */
+.country-flags img {
+    width: 40px;
+    height: 40px;
+    border-radius: 3px;
+    transition: transform 0.3s ease;
+}
+
+/* Hover effect for flags */
+.country-flags img:hover {
+    transform: scale(1.2);
+}
+
+/* Style for the country names */
+.flag-container span {
+    font-size: 0.9rem;
+    color: white;
+    margin-top: 0.3rem;
+    font-weight: 500;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* Services, About, and Contact Sections */
+#layanan,
+#tentang,
+#kontak {
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+.services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.service-item {
+    text-align: center;
+}
+
+.service-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.service-item h3 {
+    margin: 1rem 0;
+}
+
+/* Contact Form */
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+form input,
+form textarea {
+    margin-bottom: 1rem;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    background: #004aad;
+    color: white;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+/* Mobile Menu Toggle */
+.menu-toggle {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: white;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    /* Space between contact items */
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    /* Space between icon and text */
+    text-decoration: none;
+    color: #333;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.contact-item i {
+    font-size: 1.5rem;
+    /* Size of the icons */
+    color: #004aad;
+    /* Match the header color for consistency */
+}
+
+.contact-item:hover {
+    color: #ff6200;
+    /* Hover color to match the CTA button */
+}
+
+.contact-item:hover i {
+    color: #ff6200;
+    /* Icon color changes on hover */
+}
+
+
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    /* Space between image and text */
+}
+
+.about-image {
+    width: 40%;
+    /* Image takes up 40% of the container width */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow for depth */
+}
+
+.about-text {
+    width: 60%;
+    /* Text takes up 60% of the container width */
+}
+
+.about-text p {
+    margin-bottom: 1rem;
+    /* Space between paragraphs */
+    font-size: 1rem;
+    line-height: 1.8;
+    /* Improved readability */
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+
+    .about-content {
+        flex-direction: column;
+        /* Stack image and text vertically on mobile */
+        gap: 1.5rem;
+    }
+
+    .about-image {
+        width: 100%;
+        /* Full width on mobile */
+        max-width: 400px;
+        /* Prevent the image from becoming too large */
+    }
+
+    .about-text {
+        width: 100%;
+        /* Full width on mobile */
+    }
+
+    .about-text p {
+        font-size: 0.9rem;
+        /* Slightly smaller text on mobile */
+    }
+
+    .contact-info {
+        gap: 1rem;
+        /* Slightly less space on mobile */
+    }
+
+    .contact-item {
+        font-size: 1rem;
+        /* Smaller text on mobile */
+    }
+
+    .contact-item i {
+        font-size: 1.3rem;
+        /* Slightly smaller icons on mobile */
+    }
+
+    /* Navigation */
+    header {
+        height: 66px;
+        /* Increased by 10% from 60px to 66px */
+    }
+
+    nav {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 1rem;
+    }
+
+    .logo {
+        font-size: 1.2rem;
+    }
+
+    .logo-image {
+        width: 100px;
+        height: 32px;
+        margin-right: 0.5rem;
+    }
+
+    .logo span {
+        font-size: 1.2rem;
+    }
+
+    .main-nav {
+        flex-direction: column;
+        background: #004aad;
+        position: absolute;
+        top: 66px;
+        left: 0;
+        width: 100%;
+        display: none;
+    }
+
+    .main-nav.active {
+        display: flex;
+    }
+
+    .main-nav li {
+        margin: 1rem 0;
+    }
+
+    .menu-toggle {
+        display: block;
+        font-size: 1.5rem;
+        cursor: pointer;
+        color: white;
+    }
+
+    /* Hero Section */
+    .hero {
+        height: 80vh;
+        padding-top: 76px;
+    }
+
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    /* Country Flags in Hero Section */
+    .country-flags {
+        top: 96px;
+        left: 10px;
+        flex-wrap: wrap;
+    }
+
+    .country-flags img {
+        width: 32px;
+        height: 32px;
+    }
+
+    .flag-container {
+        margin-right: 0.5rem;
+    }
+
+    .flag-container span {
+        font-size: 0.7rem;
+    }
+}
