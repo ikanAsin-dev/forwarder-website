@@ -20,12 +20,3 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
-
-
-
-// Form Submission
-document.getElementById('contact-form').addEventListener('submit', (e) => {
-    e.preventDefault();
-    alert('Terima kasih! Pesan Anda telah dikirim.');
-    e.target.reset();
-});
