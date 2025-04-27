@@ -135,13 +135,121 @@ nav ul li a {
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
-/* Services, About, and Contact Sections */
-#layanan,
-#tentang,
+/* Services Section */
+#layanan {
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    /* For overlay */
+    background: url('../images/services-bg.jpg') no-repeat center/cover;
+    color: #333;
+    /* Default text color */
+}
+
+#layanan::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.7);
+    /* Semi-transparent white overlay */
+    z-index: 0;
+}
+
+#layanan * {
+    position: relative;
+    /* Ensure content is above the overlay */
+    z-index: 1;
+}
+
+#layanan h2 {
+    color: #004aad;
+    /* Match the header color */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+    /* Subtle shadow for readability */
+}
+
+#layanan p {
+    color: #333;
+}
+
+/* About Section */
+#tentang {
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    background: url('../images/about-bg.jpg') no-repeat center/cover;
+    color: #333;
+}
+
+#tentang::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.7);
+    z-index: 0;
+}
+
+#tentang * {
+    position: relative;
+    z-index: 1;
+}
+
+#tentang h2 {
+    color: #004aad;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+#tentang p {
+    color: #333;
+}
+
+/* Contact Section */
 #kontak {
     padding: 4rem 2rem;
     max-width: 1200px;
     margin: 0 auto;
+    position: relative;
+    background: url('../images/contact-bg.jpg') no-repeat center/cover;
+    color: #333;
+}
+
+#kontak::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.7);
+    z-index: 0;
+}
+
+#kontak * {
+    position: relative;
+    z-index: 1;
+}
+
+#kontak h2 {
+    color: #004aad;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    text-decoration: none;
+    color: #333;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
 }
 
 h2 {
